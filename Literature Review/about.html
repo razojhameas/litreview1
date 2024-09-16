@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LitReview - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #about h2 {
+            text-align: center;
+            font-size: 2.5rem; /* Enlarged header font size */
+            margin-bottom: 1rem;
+        }
+
+        #about p {
+            font-size: 1.25rem; /* Enlarged paragraph font size */
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .maintainer {
+            background-color:rgba(0, 0, 0, 0.071); /* Changed background color to #ffdd57 */
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px #ffdd57;
+            text-align: center;
+            margin: 1rem;
+            width: 150px;
+
+        }
+
+        .maintainer:hover {
+            background-color: #ffdd57c6; /* Changed background color to #ffdd57 */
+           
+        }
+
+
+      .profile-pic {
+        width: 80px;
+    height: 80px;
+    border-radius: 10px; /* Keep the border radius to maintain a slight curve */
+    margin-bottom: 0.5rem;
+    border: 2px solid black; /* Keep the 3px solid black border */
+    object-fit: cover; /* Add this to ensure the image is scaled to fit the square container */
+}
+
+        .maintainer a {
+            color: black; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+
+        .maintainer a:hover {
+            color: #333; 
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="blog-name">LitReview</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to LitReview! We are Group 2, the people behind the blog. This is for our performance activity, and thus for school purposes only.</p>
+            <div class="maintainers">
+                <div class="maintainer">
+                    <a href="https://www.facebook.com/jhames.razo" target="_blank" class="profile-link">
+                        <img src="assets/Jhames.jpg" alt="Jhames" class="profile-pic">
+                        <p>Jhames</p>
+                    </a>
+                </div>
+                <div class="maintainer">
+                    <a href="https://www.facebook.com/marion.dalumpienes.7" target="_blank" class="profile-link">
+                        <img src="assets/Marion.jpg" alt="Marion" class="profile-pic">
+                        <p>Marion</p>
+                    </a>
+                </div>
+                <div class="maintainer">
+                    <a href="https://www.facebook.com/sparky1spark0702" target="_blank" class="profile-link">
+                        <img src="assets/Gian.jpg" alt="Gian" class="profile-pic">
+                        <p>Gian</p>
+                    </a>
+                </div>
+                <div class="maintainer">
+                    <a href="https://www.facebook.com/acejefferson.lloce.1" target="_blank" class="profile-link">
+                        <img src="assets/Ace.jpg" alt="Ace" class="profile-pic">
+                        <p>Ace</p>
+                    </a>
+                </div>
+                <div class="maintainer">
+                    <a href="https://www.facebook.com/john.ducay.56" target="_blank" class="profile-link">
+                        <img src="assets/John Rey.jpg" alt="John Rey" class="profile-pic">
+                        <p>John Rey</p>
+                    </a>
+                </div>
+                <div class="maintainer">
+                    <a href="https://www.facebook.com/faye.ramiro.58" target="_blank" class="profile-link">
+                        <img src="assets/Faye.jfif" alt="Faye" class="profile-pic">
+                        <p>Faye</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+         window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.classList.add('loaded');
+});
+        document.addEventListener('DOMContentLoaded', () => {
+            // Create an audio element
+            const audio = new Audio('assets/pop-94319.mp3');
+            
+            // Play the sound when the page loads
+            audio.play().catch(error => {
+                console.log('Audio play failed:', error);
+            });
+            
+            // Add event listeners to profile links
+            document.querySelectorAll('.profile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    // Play the sound when a profile link is clicked
+                    audio.currentTime = 0; // Reset to start
+                    audio.play().catch(error => {
+                        console.log('Audio play failed:', error);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

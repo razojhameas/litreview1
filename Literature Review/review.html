@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LitReview - Bata, Bata... Pa'no Ka Ginawa?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .audio-trigger {
+            color: #000;
+            cursor: pointer;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .audio-trigger:hover {
+            color: #333; 
+        }
+
+        /* Style for the floating image overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid #fff;
+        }
+
+        .overlay.show {
+            display: flex;
+        }
+
+        .overlay-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        /* Style for the hover image popup */
+        .hover-popup {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hover-popup .hover-image {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .hover-popup:hover .hover-image {
+            display: block;
+        }
+
+        .hover-popup .hover-image img {
+            max-width: 200px;
+            border: 2px solid #fff;
+        }
+       
+        .hover-popup {
+    position: relative;
+    display: inline-block;
+}
+
+.popup-container {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+.popup-image {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    max-width: 200px; /* add a max-width to limit the image size */
+    max-height: 200px; /* add a max-height to limit the image size */
+}
+
+.popup-container:hover .popup-image {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="blog-name">LitReview</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <div class="title-container">
+                <h2 class="centered">
+                    <span class="popup-container">
+                        <u>Bata, Bata... Pa'no Ka Ginawa?</u>
+                        <img src="assets/movieIcon.jpg" alt="Movie Icon" class="popup-image">
+                    </span>
+                </h2>
+                <img src="assets/movieIcon.jpg" alt="Movie Icon" class="movie-icon">
+            </div>
+            
+            <!-- Remove the hover-popup and hover-image classes -->
+            <p><strong>Author:</strong> 
+                <a href="https://en.wikipedia.org/wiki/Lualhati_Bautista" target="_blank" class="author-container">
+                    <span class="popup-container">
+                       <u>Lualhati Bautista</u>
+                        <img src="assets/authorIcon.jpg" alt="Author Icon" class="popup-image">
+                    </span>
+                    <img src="assets/authorIcon.jpg" alt="Author Icon" class="author-icon">
+                </a>
+            </p>
+            <p><strong>Publication Date:</strong> 1998</p>
+            <p><strong>Genre:</strong> <span class="audio-trigger" data-speech="Drama is a genre that focuses on the emotional and relational aspects of human life. It often explores complex characters and situations.">Drama</span></p>
+            <p><strong>Review:</strong> 
+                *Bata, Bata... Pa'no Ka Ginawa?* is a powerful novel by Lualhati Bautista that delves into the struggles and triumphs of a single mother in contemporary Philippine society. The novel’s narrative is a compelling exploration of gender roles, family dynamics, and the quest for personal freedom.
+            </p>
+            <p><strong>Read the full book here:</strong> <a href="https://www.goodreads.com/book/show/1705415.Bata_Bata_Pa_no_Ka_Ginawa_" target="_blank">Get it on Goodreads</a></p>
+            
+            <!-- Analysis Section -->
+            <section id="book-interpretation">
+                <h3 class="centered">Book Interpretation</h3>
+                
+                <p>The novel centres around the life of a strong and independent woman named Lea, who navigates the difficulties of modern life in the Philippines. Lea is among those working mothers who has two kids and she hard earned to raise them with love. It follows her life, her fight with the restraints of <u class="popup-container"><u>society</u><img src="assets/society.jfif" alt="Society" class="popup-image"></u>, relations and discovery to find who she actually is.</p>
+                <p>A hit in the novel "Bata Bata Paano Ka Ginawa? " is the exploration of <u class="popup-container"><u>gender roles</u><img src="assets/gender-roles.png" alt="Gender Roles" class="popup-image"></u> and pressures from <u class="popup-container"><u>society</u><img src="assets/society.jfif" alt="Society" class="popup-image"></u>. It looks at: What are the things Filipino women do in society, and how does Lea differ from, not just those <u class="popup-container"><u>societal expectations</u><img src="assets/societal-expectations.jpg" alt="Societal Expectations" class="popup-image"></u> but also from her own <u class="popup-container"><u>ambitions</u><img src="assets/ambitions.jpg" alt="Ambitions" class="popup-image"></u> as an individual. In the character of Lea, Lualhati Bautista sheds light on <u class="popup-container"><u>social restrictions</u><img src="assets/social-restrictions.jpg" alt="Social Restrictions" class="popup-image"></u> that confine women in domestic household chores and limited roles. Here, the novel portrays Lea as a character who takes a stand against expectations, pursuing her <u class="popup-container"><u>career</u><img src="assets/career.jfif" alt="Career" class="popup-image"></u> and personal happiness despite <u class="popup-container"><u>societal pressures</u><img src="assets/societal-pressures.jfif" alt="Societal Pressures" class="popup-image"></u>.</p>
+                <p>The novel also reveals issues of <u class="popup-container"><u>bonding</u><img src="assets/bonding.jfif" alt="Bonding" class="popup-image"></u> or relationship in the family, especially revolving around the functions/roles of mothers in their children. The interaction between Lea and her children expose the dynamics of the complexities of <u class="popup-container"><u>family responsibilities</u><img src="assets/family-responsibilities.jfif" alt="Family Responsibilities" class="popup-image"></u> and expectations. This shows how the interactions of personal desires with that of family expectations create difficulties. It portrays this relationship and shows how the effects of societal expectations lead to emotional and psychological impact at the level of the individual within the family members.</p>
+                <p>"Bata Bata Paano Ka Ginawa?" is one of the excellent literary piece with great pieces of advice one could adopt from. It will critically point out what had wronged the Filipino people in their own society when it comes to <u class="popup-container"><u>gender roles</u><img src="assets/gender-roles.png" alt="Gender Roles" class="popup-image"></u> and <u class="popup-container"><u>family dynamics</u><img src="assets/family-dynamics.jfif" alt="Family Dynamics" class="popup-image"></u>. The life of Lea described by Lualhati Bautista is a wonderful telling of a story that questions the norms and preaches to gain more understanding and empathy. This novel remains a significant literary work in the Philippine literature.</p>
+                <p>Furthermore, the novel explores the theme of <u class="popup-container"><u>identity</u><img src="assets/identity.png" alt="Identity" class="popup-image"></u> and how it is shaped by societal expectations and personal experiences. Lea's journey is a testament to the human desire for self-discovery and the importance of embracing one's true self. The novel also highlights the significance of <u class="popup-container"><u>family support</u><img src="assets/family-support.jfif" alt="Family Support" class="popup-image"></u> and the impact it has on an individual's well-being.</p>
+                <p>Overall, "Bata Bata Paano Ka Ginawa?" is a thought-provoking novel that challenges readers to reflect on their own values and beliefs. It is a powerful exploration of the human experience and the complexities of family relationships, gender roles, and societal expectations.</p>
+            </section>
+            <section id="scene-analysis">
+                <h3 class="centered">Analysis</h3>
+                <p><strong><span class="audio-trigger" data-speech="Biographical context refers to the background and life experiences of the author or subject of a work. It includes details about their personal history, experiences, and influences that shape their work.">Biographical Context</span>:</strong></p>
+                <p>Lualhati Torres Bautista is one of the foremost Filipino female novelists in the history of Contemporary Philippine Literature.</p>
+                <p>Lualhati Bautista was born in <u class="popup-container"><u>Tondo, Manila</u><img src="assets/toindo.jpg" alt="Tondo" class="popup-image"></u>, Philippines on December 2, 1945, to <u>Esteban Bautista</u> and <u>Gloria Torres</u>. She graduated from <u class="popup-container"><u>Emilio Jacinto Elementary School</u><img src="assets/emilio-jacinto-elementary-school.png" alt="Emilio Jacinto Elementary School" class="popup-image"></u> in 1958, and from <u class="popup-container"><u>Torres High School</u><img src="assets/torres-high-school.jpg" alt="Torres High School" class="popup-image"></u> in 1962. She was a journalism student at the <u class="popup-container"><u>Lyceum of the Philippines</u><img src="assets/lyceum-of-the-philippines.jfif" alt="Lyceum of the Philippines" class="popup-image"></u> but dropped out even before she finished her freshman year.</p>
+                <p>Despite a lack of formal training, Bautista became known for her <u>honest realism</u>, courageous exploration of Philippine women’s issues, and her compelling female protagonists who confront difficult situations at home and in the workplace with uncommon grit and strength.</p>
+                <p>Being a novelist, she is also a <u>movie and television scriptwriter</u> and a <u>short story writer.</u></p>
+                <p><a href="#" id="extra-details">WORKS AND AWARDS</a></p>
+                <p><strong><span class="audio-trigger" data-speech="Sociocultural context involves the social and cultural environment in which a work is created. It encompasses societal norms, cultural practices, and historical influences that affect the content and meaning of the work.">Sociocultural Context</span>:</strong></p>
+                <p>"Bata, Bata, Pa'no ka Ginawa?" explores the challenges faced by a single mother, Lea, who raises her children amidst <u class="popup-container"><u>societal expectations</u><img src="assets/societal-expectations.jpg" alt="Societal Expectations" class="popup-image"></u> and economic hardships in the Philippines. 
+                    Lea's life is complicated by having had two husbands—one with a marriage certificate and one without. She chooses to stay with her new husband, despite their relationship being viewed by society as <u class="popup-container"><u>illegitimate</u><img src="assets/illegitimate.jfif" alt="Illegitimate" class="popup-image"></u>, which adds to the <u class="popup-container"><u>stigma</u><img src="assets/stigma.jfif" alt="Stigma" class="popup-image"></u> they face. 
+                                    
+                </p>
+                <p>This narrative mirrors the struggles of many Filipino families in the 1990s, characterized by <u class="popup-container"><u>familial chaos</u><img src="assets/familial-chaos.jfif" alt="Familial Chaos" class="popup-image"></u> and <u class="popup-container"><u>interpersonal conflicts</u><img src="assets/interpersonal-conflicts.jfif" alt="Interpersonal Conflicts" class="popup-image"></u>. A pivotal scene demonstrates Lea's strength when she expresses her love for Ding, her stepson, despite <u class="popup-container"><u>societal discrimination</u><img src="assets/societal-discrimination.jfif" alt="Societal Discrimination" class="popup-image"></u> and personal adversity. Filipino cultural norms place strong emphasis on <u class="popup-container"><u>respect for mothers</u><img src="assets/respect-for-mothers.jfif" alt="Respect for Mothers" class="popup-image"></u>, a value that significantly impacts family dynamics, as seen when Ding's respect for his mother disrupts the relationship between him and Lea.</p>
+                <p>The novel provides a nuanced examination of <u class="popup-container"><u>gender roles</u><img src="assets/gender-roles.png" alt="Gender Roles" class="popup-image"></u>, <u class="popup-container"><u>family resilience</u><img src="assets/family-resilience.jfif" alt="Family Resilience" class="popup-image"></u>, and the impact of <u class="popup-container"><u>economic inequality</u><img src="assets/economic-inequality.jfif" alt="Economic Inequality" class="popup-image"></u> on ordinary Filipinos.</p>
+                <p><strong><span class="audio-trigger" data-speech="Linguistic context refers to the language and communication styles used in a work, including the author's tone, syntax, and vocabulary choices.">Linguistic Context</span>:</strong></p>
+<p>The straightforward <u>Filipino language</u> used in the text emphasizes key themes such as <u>motherhood</u> and <u class="popup-container"><u>societal expectations</u><img src="assets/societal-expectations.jpg" alt="Societal Expectations" class="popup-image"></u>. Terms of endearment like “<u>anak</u>"" and “<u>mahal</u>” are strategically used to convey the warmth and depth of family relationships. This choice of language allows readers to connect with the characters on a personal level and understand the emotional challenges they face.</p>
+<p>By focusing on clear and accessible language, Bautista effectively explores the complexities of <u>Filipino family life</u> and <u class="popup-container"><u>gender roles</u><img src="assets/gender-roles.png" alt="Gender Roles" class="popup-image"></u>. The novel’s language captures the nuances of <u>personal and social issues</u>, making it both engaging and thought-provoking.</p>
+<p>Lualhati Bautista’s Bata, Bata, Pa’no Ka Ginawa? uses everyday <u>Filipino language</u> to offer a realistic and intimate portrayal of its characters and their experiences. The novel employs simple, direct language that mirrors how people speak in real life, making the dialogue and interactions feel <u class="popup-container"><u>authentic</u><img src="assets/authentic.jfif" alt="Authentic" class="popup-image"></u> and <u class="popup-container"><u>relatable</u><img src="assets/relatable.jfif" alt="Relatable" class="popup-image"></u>.</p>
+<p><strong><span class="audio-trigger" data-speech="Reader's context pertains to the personal background, experiences, and perspectives of the readers. It influences how they interpret and relate to a text based on their individual experiences and cultural understanding.">Reader's Context</span>:</strong></p>
+<p>My <u>personal history</u> and experiences greatly influence my interpretation of "Bata Bata Paano Ka Ginawa?" by Lualhati Bautista. Growing up in this modern day <u>Filipino setting</u>, I always noticed firsthand the problem related to <u class="popup-container"><u>gender issues</u><img src="assets/gender-issues.jfif" alt="Gender Issues" class="popup-image"></u> and <u class="popup-container"><u>family dynamics</u><img src="assets/family-dynamics.jfif" alt="Family Dynamics" class="popup-image"></u> that our society has long been struggling with. It is for this reason that this book's portrayal of <u class="popup-container"><u>feminist struggles</u><img src="assets/feminist-struggles.jfif" alt="Feminist Struggles" class="popup-image"></u> and the search for <u class="popup-container"><u>self-identity</u><img src="assets/self-identity.jfif" alt="Self-Identity" class="popup-image"></u> particularly resonates with me.</p>
+<p>In school, I'm constantly struggling with <u class="popup-container"><u>academic performance</u><img src="assets/academic-performance.jfif" alt="Academic Performance" class="popup-image"></u> and <u class="popup-container"><u>societal pressures</u><img src="assets/societal-pressures.jfif" alt="Societal Pressures" class="popup-image"></u>, much like Lea in the novel. Her desire to be <u class="popup-container"><u>independent</u><img src="assets/independent.jfif" alt="Independent" class="popup-image"></u> in understanding that a mother is simultaneously an individual resonates with me in my struggle to draw some kind of line for my own path while meeting expectations from <u class="popup-container"><u>family</u><img src="assets/family.jfif" alt="Family" class="popup-image"></u> and <u class="popup-container"><u>society</u><img src="assets/society.jfif" alt="Society" class="popup-image"></u>.</p>
+<p>Furthermore, I can relate to Lea's struggles with <u class="popup-container"><u>gender roles</u><img src="assets/gender-roles.png" alt="Gender Roles" class="popup-image"></u> and the expectations placed upon her as a mother. As a student, I often feel the weight of <u class="popup-container"><u>societal expectations</u><img src="assets/societal-expectations.jpg" alt="Societal Expectations" class="popup-image"></u> to conform to certain norms and standards, and Lea's story serves as a reminder that it's okay to challenge these expectations and forge my own path.</p>
+<p>Overall, my personal experiences and background have greatly influenced my interpretation of "Bata Bata Paano Ka Ginawa?" and have allowed me to connect with the characters and themes on a deeper level.</p>
+            </section>
+        </article>
+    </main>
+
+    <!-- Floating Image Overlay -->
+    <div class="overlay" id="overlay">
+        <span class="overlay-close" id="overlay-close">&times;</span>
+        <img src="assets/viewDetails-1.png" alt="Lualhati Bautista">
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.classList.add('loaded');
+});
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentUtterance = null;
+
+            document.querySelectorAll('.audio-trigger').forEach(element => {
+                element.addEventListener('click', (event) => {
+                    event.stopPropagation();
+
+                    if (currentUtterance) {
+                        window.speechSynthesis.cancel(); 
+                    }
+
+                    const text = element.getAttribute('data-speech');
+                    currentUtterance = new SpeechSynthesisUtterance(text);
+                    currentUtterance.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google US English'); 
+                    window.speechSynthesis.speak(currentUtterance);
+                });
+            });
+
+            document.addEventListener('click', () => {
+                if (currentUtterance) {
+                    window.speechSynthesis.cancel(); 
+                    currentUtterance = null;
+                }
+            });
+
+            // Image overlay functionality
+            document.getElementById('extra-details').addEventListener('click', (event) => {
+                event.preventDefault();
+                document.getElementById('overlay').classList.add('show');
+            });
+
+            document.getElementById('overlay-close').addEventListener('click', () => {
+                document.getElementById('overlay').classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
+

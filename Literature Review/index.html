@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LitReview - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1 class="blog-name">LitReview</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="works">
+    
+            <div class="work">
+                <div class="work-content">
+                    <a href="https://www.goodreads.com/book/show/1705415.Bata_Bata_Pa_no_Ka_Ginawa_" target="_blank">
+                        <img src="assets/movieIcon.jpg" alt="Movie Icon" class="movie-icon1">
+                        <h3>Bata, Bata... Pa'no Ka Ginawa?</h3>
+                    </a>
+                    <a href="review.html" class="read-review">Click to read the full review.</a>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work-content">
+                    <a href="https://www.goodreads.com/book/show/1433337.ABNKKBSNPLAKo_" target="_blank">
+                        <img src="assets/bobOng1.jpg" alt="Book Icon" class="movie-icon1">
+                        <h3>ABNKKBSNPLAKo?!</h3>
+                    </a>
+                    <a id="book2-link" href="https://static.vecteezy.com/system/resources/thumbnails/001/214/905/small_2x/under-construction-sign-with-hat-on-traffic-cone.jpg" class="read-review">Working on it.</br> Available On 9/23/2024.</a>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work-content">
+                    <a href="https://www.goodreads.com/book/show/1610333.Poems_for_Muddas?from_search=true&from_srp=true&qid=cQqWd1yuL5&rank=1" target="_blank">
+                        <img src="assets/tan1.jpg" alt="Book Icon" class="movie-icon1">
+                        <h3>Poems for Muddas</h3>
+                    </a>
+                    <a id="book3-link" href="https://static.vecteezy.com/system/resources/thumbnails/001/214/905/small_2x/under-construction-sign-with-hat-on-traffic-cone.jpg" class="read-review">Working on it.</br> Available On 9/24/2024.</a>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work-content">
+                    <a href="https://www.goodreads.com/book/show/61439040-1984?from_search=true&from_srp=true&qid=zD9e5l3S9Y&rank=1" target="_blank">
+                        <img src="assets/1984.jpg" alt="Book Icon" class="movie-icon1">
+                        <h3>1984</h3>
+                    </a>
+                    <a id="book4-link" href="https://static.vecteezy.com/system/resources/thumbnails/001/214/905/small_2x/under-construction-sign-with-hat-on-traffic-cone.jpg" class="read-review">Working on it.</br> Available On 9/25/2024.</a>
+                </div>
+            </div>
+    
+        </section>
+    </main>
+
+    <script>
+           window.addEventListener('DOMContentLoaded', (event) => {
+    document.body.classList.add('loaded');
+});
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Create an audio element
+            const audio = new Audio('assets/Jackhammer Sound Effect.mp3');
+
+            // Function to open and close the Vecteezy URL in a new tab
+            function openAndCloseTab(url) {
+                const newTab = window.open(url, '_blank');
+                audio.play(); // Start playing the sound
+                setTimeout(() => {
+                    if (newTab) {
+                        newTab.close();
+                        audio.pause(); // Stop playing the sound
+                        audio.currentTime = 0; // Reset the sound to the start
+                    }
+                }, 3000);
+            }
+
+            // Attach click event handlers
+            document.getElementById('book2-link').addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default behavior
+                openAndCloseTab(event.target.href); // Open and close the tab
+            });
+
+            document.getElementById('book3-link').addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default behavior
+                openAndCloseTab(event.target.href); // Open and close the tab
+            });
+
+            document.getElementById('book4-link').addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default behavior
+                openAndCloseTab(event.target.href); // Open and close the tab
+            });
+        });
+    </script>
+</body>
+</html>

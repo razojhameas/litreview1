@@ -1,0 +1,388 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow-x: hidden; 
+
+}
+
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+
+header h1.blog-name {
+    font-size: 2.5rem;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color:#ffdd57
+}
+
+header h1.blog-name:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+
+nav ul li a.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+
+nav ul li a.nav-link:hover {
+    background-color: #ffdd57;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); 
+}
+
+
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+#works {
+    margin: 2rem 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    border-color: #000000;
+    border-width: 1111111px;
+    
+}
+
+#works h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.work {
+    width: 250px;
+    height: 350px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-color: #000000;
+    border-width: 1111111px;
+}
+
+h3.centered {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    color:#000000
+}
+
+p.centered {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 20px;
+    color:#000000
+}
+
+h3.centered:hover {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    color:#000000;
+    text-shadow: #000000;
+    box-shadow: #000000;
+    text-decoration-line: underline;
+    text-decoration-color: #000000;
+}
+
+
+.work:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffdd57; /* Add this line to change the background color on hover */
+}
+
+
+.work-content {
+    background-color: rgba(0, 0, 0, 0.071);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 10px 10px #ffdd57;
+    text-align: center;
+    transition: background-color 0.3s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+
+.work-content:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffdd57; /* Add this line to change the background color on hover */
+}
+
+.work-content h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.work-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.work-content p {
+    margin: 0.5rem 0 0;
+}
+
+.movie-icon1 {
+    width: 100px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+
+.maintainers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.maintainer {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 1rem;
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.maintainer:hover {
+    z-index: 10;
+    transform: scale(1.5) translateY(-10%);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0rem;
+    transition: transform 0.3s ease;
+}
+
+.maintainer:hover .profile-pic {
+    transform: scale(1.2);
+}
+
+
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.maintainer:hover ~ body:before {
+    opacity: 1;
+}
+
+
+.title-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+.movie-icon {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transform: translateX(10px) scale(0); 
+    width: 150px;
+    height: 225px; 
+    transition: transform 0.3s ease;
+    z-index: 10; 
+}
+
+
+
+.author-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer; 
+}
+
+
+
+.author-icon {
+    position: absolute;
+    top: 10px; 
+    left: 130%; 
+    transform: scale(0); 
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    z-index: 10; 
+}
+
+
+a {
+    color: inherit;
+    text-decoration: underline; 
+}
+
+
+a:hover {
+    color: inherit; 
+    text-decoration: underline; 
+}
+
+
+.audio-trigger {
+    color: inherit; 
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+
+.audio-trigger {
+    color: #333; 
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+
+.audio-trigger:hover {
+    color: #555;
+}
+
+main1 {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+#contact {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    background-color: #ffdd57; /* Add this line to change the background color on hover */
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px; 
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
